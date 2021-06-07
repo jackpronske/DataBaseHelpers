@@ -8,6 +8,11 @@ class App extends React.Component {
     this.state = {
       contactList: [1,2,3,4]
     };
+    this.postNewContact = this.postNewContact.bind(this);
+  }
+
+  postNewContact(formObject) {
+    //post request to server with formObject as data
   }
 
   render() {
@@ -15,8 +20,8 @@ class App extends React.Component {
     return (
       <>
         <AddressList contactList={contactList} />
-        <AddressForm />
-      < />
+        <AddressForm postNewContact={this.postNewContact}/>
+      </>
     )
   }
 }
