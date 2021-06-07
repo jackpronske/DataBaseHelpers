@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AddressListItem = (props) => {
+const AddressListItem = ({ contact }) => {
   return (
-    <div> hello there </div>
+    <div>{contact.firstName} {contact.lastName}</div>
   )
 }
 

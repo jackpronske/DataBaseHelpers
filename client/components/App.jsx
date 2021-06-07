@@ -1,4 +1,5 @@
 import React from 'react';
+import { contactList } from '../dummyContacts.js';
 import AddressList from './AddressList.jsx';
 import AddressForm from './AddressForm.jsx';
 
@@ -6,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contactList: [1,2,3,4]
+      contactList: contactList
     };
     this.postNewContact = this.postNewContact.bind(this);
   }
