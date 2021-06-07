@@ -3,9 +3,13 @@ import AddressListItem from './AddressListItem.jsx';
 
 const AddressList = (props) => {
   return (
-    props.contactList.map((contact, i) => {
+    props.contactList.map((contact) => {
       return (
-        <AddressListItem contact={contact} key={i} />
+        <AddressListItem
+          contact={contact}
+          deleteContact={props.deleteContact}
+          key={contact.id}
+        />
       )
     })
   )

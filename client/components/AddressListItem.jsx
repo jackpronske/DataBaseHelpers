@@ -5,15 +5,23 @@ class AddressListItem extends React.Component {
     super(props);
     this.state = {
       showInfo: false,
+      id: this.props.contact.id,
     }
     this.handleMoreInfoClick = this.handleMoreInfoClick.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
   handleMoreInfoClick() {
     const { showInfo } = this.state;
     this.setState({
-      showInfo: !showInfo
+      showInfo: !showInfo,
     });
+  }
+
+  handleDeleteClick() {
+    const { id } = this.state;
+    const { deleteContact } = this.props;
+    deleteContact(id);
   }
 
   render() {
@@ -34,7 +42,7 @@ class AddressListItem extends React.Component {
         <div>Address: {street}, {city}</div>
         <div>Notes: {notes}</div>
         <button>edit</button>
-        <button>delete</button>
+        <button onClick={this.handleDeleteClick} >delete</button>
       </>
       : null;
 
