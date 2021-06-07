@@ -27,7 +27,7 @@ class App extends React.Component {
 
   deleteContact(id) {
     //delete request to server with id of the contact we're deleting
-    axios.delete(`/contacts/id:${id}`)
+    axios.delete(`/contacts/${id}`)
       .then((results) => {
         console.log('deleted', results);
       })
