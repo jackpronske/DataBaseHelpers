@@ -55,6 +55,7 @@ class App extends React.Component {
   updateContact(id, changesObj) {
     axios.put(`/contacts/${id}`, changesObj)
       .then((results) => {
+        //can either call a get request to retrieve refreshed data here, or handle that on the server side on the success of the updating of the current id
         console.log('updated', results);
       })
       .catch((error) => {

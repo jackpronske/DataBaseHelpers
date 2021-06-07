@@ -47,6 +47,7 @@ class AddressListItem extends React.Component {
         <div>Email: {email}</div>
         <div>Address: {street}, {city}</div>
         <div>Notes: {notes}</div>
+        {/* this would be where the update form would populate after clicking the update button below */}
         <button onClick={this.handleUpdateClick}>edit</button>
         <button onClick={this.handleDeleteClick} >delete</button>
       </>
