@@ -1,0 +1,28 @@
+{
+  "name": "databasehelpers",
+  "version": "1.0.0",
+  "description": "A Practice Repo meant for helping engineers work through different query calls within both relational and non-relational databases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackpronske/DataBaseHelpers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackpronske/DataBaseHelpers/issues"
+  },
+  "homepage": "https://github.com/jackpronske/DataBaseHelpers#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "mongoose": "^5.12.13",
+    "mysql": "^2.18.1",
+    "react": "^17.0.2"
+  }
+}
