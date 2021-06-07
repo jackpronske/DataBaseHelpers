@@ -13,6 +13,7 @@ class App extends React.Component {
     this.postNewContact = this.postNewContact.bind(this);
     this.deleteContact = this.deleteContact.bind(this);
     this.getAllContacts = this.getAllContacts.bind(this);
+    this.updateContact = this.updateContact.bind(this);
   }
 
   componentDidMount() {
