@@ -2,6 +2,7 @@ import React from 'react';
 import { contactList } from '../dummyContacts.js';
 import AddressList from './AddressList.jsx';
 import AddressForm from './AddressForm.jsx';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,10 +16,24 @@ class App extends React.Component {
 
   postNewContact(formObject) {
     //post request to server with formObject as data
+    axios.post('/contacts', formObject)
+      .then((results) => {
+        console.log('these are results', results)
+      })
+      .catch((error) => {
+        console.error('there was an error', error)
+      })
   }
 
   deleteContact(id) {
     //delete request to server with id of the contact we're deleting
+    axios.delete(`/contacts/id:${id}`)
+      .then((results) => {
+        console.log('deleted', results);
+      })
+      .catch((error) => {
+        console.error('there was an error', error);
+      })
   }
 
 

@@ -24,6 +24,12 @@ class AddressListItem extends React.Component {
     deleteContact(id);
   }
 
+  handleUpdateClick() {
+    //this should open up a form that you can update all the fields for the current contact
+
+    //another component? I can probably reuse the submit form, but instead of posting, I send a patch to update the current contact based on id
+  }
+
   render() {
     const {
       firstName,
@@ -41,7 +47,7 @@ class AddressListItem extends React.Component {
         <div>Email: {email}</div>
         <div>Address: {street}, {city}</div>
         <div>Notes: {notes}</div>
-        <button>edit</button>
+        <button onClick={this.handleUpdateClick}>edit</button>
         <button onClick={this.handleDeleteClick} >delete</button>
       </>
       : null;
