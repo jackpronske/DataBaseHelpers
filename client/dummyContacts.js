@@ -22,7 +22,7 @@ module.exports = {
       email: 'Zeddemore@ghostbusters.com',
       street: '14 N Moore St',
       city: 'New York City',
-      notes: 'For egyptologist, voice of reason for the crew'
+      notes: 'Former egyptologist, voice of reason for the crew'
     },
     {
       firstName: 'Raymond',

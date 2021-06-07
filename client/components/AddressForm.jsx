@@ -25,9 +25,7 @@ class AddressForm extends React.Component {
 
   handleFormSubmit(e) {
     e.preventDefault();
-
     const { postNewContact } = this.props;
-
     postNewContact(this.state);
   }
 
