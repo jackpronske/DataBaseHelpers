@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const db = require('../database');
+const mysqldb = require('../mysqlDB');
+// const mongodb = require('../mongoDB');
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.get('/contacts', (req, res) => {
   // console.log('hitting get when page loads');
   // res.status(202).send('GET Request!');
 
-  db.getContacts((err, results) => {
+  mongodb.getContactsMongo((err, results) => {
     if (err) {
       res.status(400).send(err);
     } else {

@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
 });
 
 connection.connect(() => {
-  console.log('successful connection to the database');
+  console.log('successful connection mysql database');
 });
 
 const getContacts = (callback) => {
