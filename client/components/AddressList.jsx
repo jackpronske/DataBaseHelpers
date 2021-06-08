@@ -8,6 +8,7 @@ const AddressList = (props) => {
         <AddressListItem
           contact={contact}
           deleteContact={props.deleteContact}
+          updateContact={props.updateContact}
           key={contact.id}
         />
       )

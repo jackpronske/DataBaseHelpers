@@ -24,6 +24,9 @@ class App extends React.Component {
     axios.get('/contacts')
       .then((results) => {
         console.log('here are the get results', results)
+        // this.setState({
+        //   contactList: results.data,
+        // })
       })
       .catch((error) => {
         console.error('oops there was an error', error)
@@ -54,6 +57,7 @@ class App extends React.Component {
   }
 
   updateContact(id, changesObj) {
+    console.log(id, changesObj);
     axios.put(`/contacts/${id}`, changesObj)
       .then((results) => {
         //can either call a get request to retrieve refreshed data here, or handle that on the server side on the success of the updating of the current id
@@ -73,6 +77,7 @@ class App extends React.Component {
         <AddressList
           contactList={contactList}
           deleteContact={this.deleteContact}
+          updateContact={this.updateContact}
         />
         <AddressForm postNewContact={this.postNewContact}/>
       </>

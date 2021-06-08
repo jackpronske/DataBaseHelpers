@@ -1,14 +1,18 @@
 import React from 'react';
+import UpdateContactForm from './UpdateContactForm.jsx';
 
 class AddressListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showInfo: false,
+      showEdit: true,
       id: this.props.contact.id,
     }
     this.handleMoreInfoClick = this.handleMoreInfoClick.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
+    this.handleUpdateClick = this.handleUpdateClick.bind(this);
+    this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
   }
 
   handleMoreInfoClick() {
@@ -25,9 +29,23 @@ class AddressListItem extends React.Component {
   }
 
   handleUpdateClick() {
-    //this should open up a form that you can update all the fields for the current contact
+    const { showEdit } = this.state;
+   this.setState({
+     showEdit: !showEdit
+   });
+  }
 
-    //another component? I can probably reuse the submit form, but instead of posting, I send a patch to update the current contact based on id
+  handleUpdateSubmit(newContactObj) {
+    const { showEdit, id } = this.state;
+    //sends a update request to the app, which sends to server
+    console.log('got to this', newContactObj, this.state.id);
+    const { updateContact } = this.props;
+    updateContact(id, newContactObj);
+
+    //changes showEdit back to normal, should update with new information
+    this.setState({
+      showEdit: !showEdit
+    })
   }
 
   render() {
@@ -40,7 +58,7 @@ class AddressListItem extends React.Component {
       notes,
     } = this.props.contact;
 
-    const { showInfo } = this.state;
+    const { showInfo, showEdit } = this.state;
 
     const moreInfo = showInfo ?
       <>
@@ -53,10 +71,19 @@ class AddressListItem extends React.Component {
       </>
       : null;
 
-    return (
+    const currentDisplay =  showEdit ?
       <>
         <div onClick={this.handleMoreInfoClick}>{firstName} {lastName}</div>
         {moreInfo}
+      </>
+      : <UpdateContactForm
+          contact={this.props.contact}
+          handleUpdateSubmit={this.handleUpdateSubmit}
+        />;
+
+    return (
+      <>
+      {currentDisplay}
       </>
     )
   }
