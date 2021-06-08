@@ -2,8 +2,8 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'student',
-  password: 'student',
+  user: 'FILL ME IN',
+  password: 'FILL ME IN',
   database: 'AddressBook'
 });
 
@@ -11,8 +11,11 @@ connection.connect(() => {
   console.log('successful connection mysql database');
 });
 
+
+//getContacts is already written out for you
 const getContacts = (callback) => {
-  connection.query('SELECT * FROM contacts', (err, data) => {
+  const sql = 'SELECT * FROM contacts';
+  connection.query(sql, (err, data) => {
     if (err) {
       console.error(err);
       callback(err, null);
