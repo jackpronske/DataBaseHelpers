@@ -34,7 +34,7 @@ app.delete('/contacts/:id', (req, res) => {
 app.put('/contacts/:id', (req, res) => {
   // console.log('PUT id', req.params.id)
   // console.log('PUT body', req.body);
-  res.status(200).send('PUT Request!')
+  res.status(200).send('PUT Request!');
 })
 
 app.listen(3005, () => {
