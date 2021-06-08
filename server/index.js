@@ -12,7 +12,7 @@ app.get('/contacts', (req, res) => {
   // console.log('hitting get when page loads');
   // res.status(202).send('GET Request!');
 
-  mongodb.getContactsMongo((err, results) => {
+  mysqldb.getContacts((err, results) => {
     if (err) {
       res.status(400).send(err);
     } else {
