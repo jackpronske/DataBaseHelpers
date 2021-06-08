@@ -48,7 +48,6 @@ class App extends React.Component {
     //delete request to server with id of the contact we're deleting
     axios.delete(`/contacts/${id}`)
       .then((results) => {
-        //can either call a get request to retrieve refreshed data here, or handle that on the server side on the success of the deletion of the current id
         console.log('deleted', results);
       })
       .catch((error) => {
@@ -57,10 +56,9 @@ class App extends React.Component {
   }
 
   updateContact(id, changesObj) {
-    console.log(id, changesObj);
+    //update request to server with id and changes object of contact we're updating
     axios.put(`/contacts/${id}`, changesObj)
       .then((results) => {
-        //can either call a get request to retrieve refreshed data here, or handle that on the server side on the success of the updating of the current id
         console.log('updated', results);
       })
       .catch((error) => {

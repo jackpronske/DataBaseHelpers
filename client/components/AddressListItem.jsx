@@ -37,12 +37,10 @@ class AddressListItem extends React.Component {
 
   handleUpdateSubmit(newContactObj) {
     const { showEdit, id } = this.state;
-    //sends a update request to the app, which sends to server
-    console.log('got to this', newContactObj, this.state.id);
     const { updateContact } = this.props;
+
     updateContact(id, newContactObj);
 
-    //changes showEdit back to normal, should update with new information
     this.setState({
       showEdit: !showEdit
     })
@@ -65,7 +63,6 @@ class AddressListItem extends React.Component {
         <div>Email: {email}</div>
         <div>Address: {street}, {city}</div>
         <div>Notes: {notes}</div>
-        {/* this would be where the update form would populate after clicking the update button below */}
         <button onClick={this.handleUpdateClick}>edit</button>
         <button onClick={this.handleDeleteClick} >delete</button>
       </>
