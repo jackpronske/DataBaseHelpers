@@ -58,7 +58,10 @@ class UpdateContactForm extends React.Component {
     } = this.state;
 
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <form
+        onSubmit={this.handleFormSubmit}
+        className="address-form"
+      >
         <label>
           First Name:
           <input
@@ -119,7 +122,11 @@ class UpdateContactForm extends React.Component {
           ></input>
         </label>
 
-        <input type="submit" value="Update Contact"></input>
+        <input
+          id="add-contact-button"
+          type="submit"
+          value="Update Contact"
+        ></input>
       </form>
     )
   }

@@ -27,6 +27,14 @@ class AddressForm extends React.Component {
     e.preventDefault();
     const { postNewContact } = this.props;
     postNewContact(this.state);
+    this.setState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      street: '',
+      city: '',
+      notes: '',
+    })
   }
 
   render() {
@@ -40,7 +48,10 @@ class AddressForm extends React.Component {
     } = this.state;
 
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <form
+        onSubmit={this.handleFormSubmit}
+        className="address-form"
+      >
         <label>
           First Name:
           <input
@@ -101,7 +112,10 @@ class AddressForm extends React.Component {
           ></input>
         </label>
 
-        <input type="submit" value="Add Contact"></input>
+        <input
+          id="add-contact-button"
+          type="submit" value="Add Contact"
+        ></input>
       </form>
     )
   }
