@@ -12,13 +12,14 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 //get endpoint is already written out for you
 app.get('/contacts', (req, res) => {
   //currently set for mysqldb, make sure to change the method when switching to mongodb
-  mysqldb.getContacts((err, results) => {
-    if (err) {
-      res.status(400).send(err);
-    } else {
-      res.status(200).send(results);
-    }
-  })
+  // mysqldb.getContacts((err, results) => {
+  //   if (err) {
+  //     res.status(400).send(err);
+  //   } else {
+  //     res.status(200).send(results);
+  //   }
+  // })
+  res.send('info');
 })
 
 app.post('/contacts', (req, res) => {
