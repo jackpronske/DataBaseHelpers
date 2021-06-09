@@ -4,8 +4,6 @@ A Practice Repo meant for helping engineers work through different CRUD within b
 TODO -
 Write out README with pictures and instructions on how to set up, test, and complete this repo
 
-CSS on the front end to make look presentable and on par with / better than other SEIR practice repos
-
 Offer links to the getting started pages and other helpful posts about how to set up these database connections and making query calls
 
 
