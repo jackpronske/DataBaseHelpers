@@ -72,12 +72,17 @@ class App extends React.Component {
     const { contactList } = this.state;
     return (
       <>
-        <AddressList
-          contactList={contactList}
-          deleteContact={this.deleteContact}
-          updateContact={this.updateContact}
-        />
-        <AddressForm postNewContact={this.postNewContact}/>
+      <h1> ADDRESS BOOK </h1>
+        <div className="address-list">
+          <AddressList
+            contactList={contactList}
+            deleteContact={this.deleteContact}
+            updateContact={this.updateContact}
+          />
+        </div>
+        <AddressForm
+          className="address-form"
+          postNewContact={this.postNewContact}/>
       </>
     )
   }

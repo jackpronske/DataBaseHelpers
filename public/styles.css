@@ -1,3 +1,32 @@
 body {
-  background-color: aqua;
+  background-color: lightcoral;
+}
+
+h1 {
+  text-align: center;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.address-list-item {
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.contact-name {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.address-form {
+
 }

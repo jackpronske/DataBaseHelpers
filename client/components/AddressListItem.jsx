@@ -70,7 +70,12 @@ class AddressListItem extends React.Component {
 
     const currentDisplay =  showEdit ?
       <>
-        <div onClick={this.handleMoreInfoClick}>{firstName} {lastName}</div>
+        <div
+          className="contact-name"
+          onClick={this.handleMoreInfoClick}
+        >
+          {firstName} {lastName}
+        </div>
         {moreInfo}
       </>
       : <UpdateContactForm
@@ -79,9 +84,9 @@ class AddressListItem extends React.Component {
         />;
 
     return (
-      <>
+      <div className="address-list-item">
       {currentDisplay}
-      </>
+      </div>
     )
   }
 }
