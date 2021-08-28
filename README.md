@@ -1,11 +1,6 @@
 # DataBaseHelpers
 A Practice Repo meant for helping engineers work through different CRUD within both relational and non-relational databases.
 
-TODO -
-Write out README with pictures and instructions on how to set up, test, and complete this repo
-
-Offer links to the getting started pages and other helpful posts about how to set up these database connections and making query calls
-
 
 
 The application is a simple Address Book app that has CRUD functionality to view, post, edit and delete new contacts. Clicking on a name will load that contacts information, with options to delete or edit. Feel free to play around with this front end and check out the console logs and methods on App.jsx to really see what is happening underneath the hood.
