@@ -1,11 +1,16 @@
 const express = require("express");
 const path = require("path");
-const mysqldb = require("../mysqlDB");
+
+/* ====== CHOOSE EITHER MySQL or MONGO DBMS ====== */
+// const mysqldb = require("../mysqlDB");
 // const mongodb = require('../mongoDB');
 
 const app = express();
 
+/* ====== Body Parser for our incoming requests ====== */
 app.use(express.json());
+
+/* ====== Serves our index.html file located in the ../client/public folder on a get request to the default path '/' ====== */
 app.use(express.static(path.join(__dirname, "..", "client", "public")));
 
 //GET endpoint is already written out for you

@@ -9,6 +9,12 @@
  - MySQL DBMS
  - Mongo DBMS
 
+ ## Getting Started
+
+ - <em>npm install</em> to install all our dependencies for the application.
+ - <em>npm run build</em> to bundle our files with Webpack
+ - <em>npm start</em> to start the node/express server
+
 
 This application is a simple Address Book that has CRUD functionality to view, post, edit and delete new contacts. Clicking on a name will load that contact's information, with options to delete or edit. Feel free to play around with this front end, <em>specifically checking out the console logs and methods on App.jsx </em> to really see what is happening underneath the hood.
 
