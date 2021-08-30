@@ -19,7 +19,7 @@ A Practice Repo meant for helping engineers work through different CRUD within b
 
 &nbsp;
 
-This application is a simple Address Book that has CRUD functionality to view, post, edit and delete new contacts. Clicking on a name will load that contact's information, with options to delete or edit. Feel free to play around with this front end, <em>specifically checking out the console logs and methods on App.jsx </em> to really see what is happening underneath the hood. Front end code is important, but you'll be focusing mainly on the back end, with some slight changes in front end as needed (re-rendering state in the success of an http request). <strong>All the http requests are currently functioning and will send the appopriate information to the server to then be manipulated by you.</strong>
+This application is a simple Address Book that has CRUD functionality to view, post, edit and delete new contacts. Clicking on a name will load that contact's information, with options to delete or edit. Feel free to play around with this front end, <em>specifically checking out the console logs and methods on App.js </em> to really see what is happening underneath the hood. Front end code is important, but you'll be focusing mainly on the back end, with some slight changes in front end as needed (re-rendering state in the success of an http request). <strong>All the http requests are currently functioning and will send the appopriate information to the server to then be manipulated by you.</strong>
 
 You have Dummy data provided for you via the dummyContacts.js file, <strong><em>it is advised that you base your database schemas/tables off of this template.</em></strong>
 
