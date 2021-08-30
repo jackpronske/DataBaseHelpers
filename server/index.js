@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "client", "public")));
 
-//get endpoint is already written out for you
+//GET endpoint is already written out for you
 app.get("/contacts", (req, res) => {
   //currently set for mysqldb, make sure to change the method when switching to mongodb
   // mysqldb.getContacts((err, results) => {
