@@ -28,17 +28,20 @@ app.get("/contacts", (req, res) => {
 
 app.post("/contacts", (req, res) => {
   console.log("hitting post", req.body);
+
   res.status(200).send("POST Request!");
 });
 
 app.delete("/contacts/:id", (req, res) => {
   console.log("hitting delete", req.params.id);
+
   res.status(200).send("DELETE Request!");
 });
 
 app.put("/contacts/:id", (req, res) => {
   console.log("PUT id", req.params.id);
   console.log("PUT body", req.body);
+
   res.status(200).send("PUT Request!");
 });
 

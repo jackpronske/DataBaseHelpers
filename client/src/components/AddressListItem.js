@@ -1,5 +1,5 @@
-import React from 'react';
-import UpdateContactForm from './UpdateContactForm.jsx';
+import React from "react";
+import UpdateContactForm from "./UpdateContactForm.js";
 
 class AddressListItem extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class AddressListItem extends React.Component {
       showInfo: false,
       showEdit: true,
       id: this.props.contact.id,
-    }
+    };
     this.handleMoreInfoClick = this.handleMoreInfoClick.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
     this.handleUpdateClick = this.handleUpdateClick.bind(this);
@@ -30,9 +30,9 @@ class AddressListItem extends React.Component {
 
   handleUpdateClick() {
     const { showEdit } = this.state;
-   this.setState({
-     showEdit: !showEdit
-   });
+    this.setState({
+      showEdit: !showEdit,
+    });
   }
 
   handleUpdateSubmit(newContactObj) {
@@ -42,52 +42,43 @@ class AddressListItem extends React.Component {
     updateContact(id, newContactObj);
 
     this.setState({
-      showEdit: !showEdit
-    })
+      showEdit: !showEdit,
+    });
   }
 
   render() {
-    const {
-      firstName,
-      lastName,
-      email,
-      street,
-      city,
-      notes,
-    } = this.props.contact;
+    const { firstName, lastName, email, street, city, notes } =
+      this.props.contact;
 
     const { showInfo, showEdit } = this.state;
 
-    const moreInfo = showInfo ?
+    const moreInfo = showInfo ? (
       <>
         <div>Email: {email}</div>
-        <div>Address: {street}, {city}</div>
+        <div>
+          Address: {street}, {city}
+        </div>
         <div>Notes: {notes}</div>
         <button onClick={this.handleUpdateClick}>edit</button>
-        <button onClick={this.handleDeleteClick} >delete</button>
+        <button onClick={this.handleDeleteClick}>delete</button>
       </>
-      : null;
+    ) : null;
 
-    const currentDisplay =  showEdit ?
+    const currentDisplay = showEdit ? (
       <>
-        <div
-          className="contact-name"
-          onClick={this.handleMoreInfoClick}
-        >
+        <div className="contact-name" onClick={this.handleMoreInfoClick}>
           {firstName} {lastName}
         </div>
         {moreInfo}
       </>
-      : <UpdateContactForm
-          contact={this.props.contact}
-          handleUpdateSubmit={this.handleUpdateSubmit}
-        />;
+    ) : (
+      <UpdateContactForm
+        contact={this.props.contact}
+        handleUpdateSubmit={this.handleUpdateSubmit}
+      />
+    );
 
-    return (
-      <div className="address-list-item">
-      {currentDisplay}
-      </div>
-    )
+    return <div className="address-list-item">{currentDisplay}</div>;
   }
 }
 

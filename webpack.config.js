@@ -5,7 +5,7 @@ const OUT_DIR = path.join(__dirname, "client", "public");
 
 module.exports = {
   mode: "development",
-  entry: path.join(SRC_DIR, "app.js"),
+  entry: SRC_DIR,
   output: {
     path: OUT_DIR,
     filename: "bundle.js",
@@ -13,13 +13,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader",
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js"],
   },
 };

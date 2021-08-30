@@ -1,9 +1,10 @@
 const mysql = require("mysql");
 
+/* ====== Write out your Schema.sql first before trying to connect to the database! ====== */
 const connection = mysql.createConnection({
   host: "localhost",
-  user: "FILL ME IN",
-  password: "FILL ME IN",
+  user: "FILL_ME_IN",
+  password: "FILL_ME_IN",
   database: "AddressBook",
 });
 
